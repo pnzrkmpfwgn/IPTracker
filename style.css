@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#mapid {
+  height: 475px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  padding: 10px;
+  background-image: url('./images/pattern-bg.png');
+  background-position: center;
+}
+
+.header {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 0.2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+#input {
+  flex-grow: 2;
+  border: none;
+  width: 400px;
+  padding: 12px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+#input:focus {
+  outline: none;
+}
+.btn {
+  background-color: black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 50px;
+  padding: 12px;
+  transition: background-color 0.3s linear;
+}
+.btn:hover {
+  background-color: gray;
+}
+
+/* .test {
+  background-color: gray;
+  height: 100vh;
+} */
+
+.info {
+  border-radius: 15px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 85%;
+  height: 135px;
+  background-color: white;
+  z-index: 9999999999999999999999;
+}
+.box_info {
+  font-size: 24px;
+  font-weight: 600;
+  padding-left: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: hsl(0, 0%, 17%);
+}
+.box {
+  padding-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(0, 0%, 59%);
+}
+hr {
+  margin-top: 25px;
+}
+
+.info_container {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* Small Addjustment for tablet */
+@media (max-width: 768px) {
+  .box_info {
+    font-size: 20px;
+  }
+}
+
+/* For Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  .box_info {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 400px;
+    margin-top: 15px;
+  }
+  hr {
+    display: none;
+  }
+  .box_info {
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+
+  #input {
+    width: 200px;
+    padding: 6px;
+  }
+
+  #mapid {
+    height: 550px;
+  }
+
+  .container {
+    height: 40vh;
+  }
+
+  .header {
+    font-size: 18px;
+  }
+
+  .box {
+    padding-top: 0;
+  }
+}

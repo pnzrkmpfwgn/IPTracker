@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- IP Address Tracker Search for any IP address or domain IP Address Location
+    Timezone UTC -->
+    <!-- add offset value dynamically using the API -->
+    <!-- ISP -->
+
+    <div class="container">
+      <h1 class="header">IP Address Tracker</h1>
+      <form action="">
+        <input
+          id="input"
+          type="text"
+          placeholder="Search for any IP address or domain"
+        />
+        <button class="btn" id="ip_input">
+          <img src="./images/icon-arrow.svg" alt="Search" />
+        </button>
+      </form>
+      <div class="info">
+        <div class="info_container">
+          <p class="box">IP Address:</p>
+          <p class="box_info" id="IP"></p>
+        </div>
+        <hr width="1" size="50" />
+        <div class="info_container">
+          <p class="box">Location:</p>
+          <p id="region" class="box_info"></p>
+        </div>
+        <hr width="1" size="50" />
+        <div class="info_container">
+          <p class="box">Timezone:</p>
+          <p class="box_info" id="timezone"></p>
+        </div>
+        <hr width="1" size="50" />
+        <div class="info_container">
+          <p class="box">ISP:</p>
+          <p class="box_info" id="isp"></p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="test"></div> -->
+    <div class="map" id="mapid"></div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ülkü Ayberk Yiğit</a>.
+    </div>
+  </body>
+
+  <!-- ------------------------------------------------ -->
+
+  <script src="./config/env.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""
+  ></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script
+    type="application/javascript"
+    src="https://api.ipify.org?format=jsonp&callback=getIP"
+  ></script>
+</html>
